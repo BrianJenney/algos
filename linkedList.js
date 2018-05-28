@@ -17,8 +17,8 @@ LinkedList.prototype.addNode = function(val){
     }else{
         currentNode = this.head;
 
-        while(this.next){
-            currentNode = this.next;
+        while(currentNode.next){
+            currentNode = currentNode.next;
         }
         
         currentNode.next = new Node(val);

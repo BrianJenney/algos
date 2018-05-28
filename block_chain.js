@@ -33,7 +33,7 @@ function BlockChain(){
 			nextBlock = this.blockChain[i + 1];
 			curBlock = this.blockChain[i];
 
-			return nextBlock.previous == curBlock.hash;
+			return nextBlock.previous === curBlock.hash;
 		}
 	}
 }
