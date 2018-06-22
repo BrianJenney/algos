@@ -37,3 +37,21 @@ let tree = {
 };
 
 console.log(traverseTree(tree));
+
+breadthFirst = tree => {
+    let otherList = [];
+    let list = [tree];
+    while (list.length) {
+        node = list.shift();
+        otherList.push(node.value);
+        if (node.left) {
+            list.push(node.left);
+        }
+        if (node.right) {
+            list.push(node.right);
+        }
+    }
+    return otherList;
+};
+
+console.log(breadthFirst(tree));
