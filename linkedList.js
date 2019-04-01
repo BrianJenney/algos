@@ -1,39 +1,33 @@
-
-function LinkedList(val){
+function LinkedList(val) {
     this.head = null;
 }
 
-function Node(val){
+function Node(val) {
     this.node = val;
     this.next = null;
 }
 
-LinkedList.prototype.addNode = function(val){
-
+LinkedList.prototype.addNode = function(val) {
     let next, currentNode;
 
-    if(this.head === null){
+    if (this.head === null) {
         this.head = new Node(val);
-    }else{
+    } else {
         currentNode = this.head;
 
-        while(currentNode.next){
+        while (currentNode.next) {
             currentNode = currentNode.next;
         }
-        
+
         currentNode.next = new Node(val);
     }
-    
-}
+};
 
-LinkedList.prototype.removeNode = function(val){
-    if(this.head.node === val){
+LinkedList.prototype.removeNode = function(val) {
+    if (this.head.node === val) {
         this.head = this.head.next;
     }
-
-
-}
-
+};
 
 var list = new LinkedList();
 list.addNode(3);
